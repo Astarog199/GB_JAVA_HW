@@ -1,4 +1,4 @@
-package ex005_HomeWorkForSeminar_1;
+package HomeWorkForSeminar_1;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;

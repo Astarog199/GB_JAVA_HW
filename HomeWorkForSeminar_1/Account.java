@@ -1,4 +1,4 @@
-package ex005_HomeWorkForSeminar_1;
+package HomeWorkForSeminar_1;
 
 import java.time.LocalDate;
 
@@ -17,6 +17,7 @@ public class Account {
     public Account(LocalDate OpeningDate, double sum){
         this.OpeningDate = OpeningDate;
         putAmount(sum);
+
     }
 
 
@@ -32,7 +33,11 @@ public class Account {
      * Метод пополнения счёта
      */
     public void putAmount(double sum) {
-        this.amount += sum;
+        if(sum>=0.0){
+            this.amount += sum;
+        }else {
+            System.out.println("ошибка");
+        }
     }
 
     /**
