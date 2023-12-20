@@ -36,6 +36,7 @@ public class main {
         hero.meleeAttack(hero2);
         hero.meleeAttack(hero2);
 
+
         System.out.println();
         processingLeveling.stateLevel(hero);
 

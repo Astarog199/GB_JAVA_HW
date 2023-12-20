@@ -49,7 +49,7 @@ public abstract class Hero implements Experience, HeroLeveling {
             int damage = random.nextInt(100) + 1;
             target.GetDamage(damage);
             if(target.getStatus() == State.dead){
-                getExpeirence();
+                setCurrentExpeirence(250);
                 setCurrentLevel();
             }
         }else {
@@ -97,15 +97,22 @@ public abstract class Hero implements Experience, HeroLeveling {
 
     @Override
     public int getExpeirence() {
-        experience +=250;
-        return experience;
+return 0;
     }
 
+    /**
+     *
+     * @return текущий уровень
+     */
     @Override
     public int getCurrentLevel() {
         return level;
     }
 
+    /**
+     *
+     * @return кол-во опыта на текущем уровне
+     */
     @Override
     public int getCurrentExpeirence() {
         return experience;
@@ -124,8 +131,10 @@ public abstract class Hero implements Experience, HeroLeveling {
         }
     }
 
-
-
+    @Override
+    public void setCurrentExpeirence(int exp) {
+        experience += exp;
+    }
 
     @Override
     public String toString() {
