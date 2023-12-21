@@ -2,7 +2,7 @@ package HomeWorkForSeminar_3;
 
 import java.util.Comparator;
 
-public class EmployeeBySalaryComparator_Descending implements Comparator<Employee> {
+public class EmployeeBySalaryComparatorDescending implements Comparator<Employee> {
     @Override
     public int compare(Employee obj1, Employee obj2) {
         if (obj1.salary < obj2.salary)  return 1;

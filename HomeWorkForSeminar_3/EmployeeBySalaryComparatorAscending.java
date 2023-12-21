@@ -3,10 +3,10 @@ package HomeWorkForSeminar_3;
 import java.util.Comparator;
 
 /**
- * Сортировка
+ * сортировка зарплаты по возрастанию
  */
 
-public class EmployeeByAgeComparator_Ascending implements Comparator<Employee> {
+public class EmployeeBySalaryComparatorAscending implements Comparator<Employee> {
     @Override
     public int compare(Employee obj1, Employee obj2) {
         if (obj1.salary < obj2.salary)  return -1;

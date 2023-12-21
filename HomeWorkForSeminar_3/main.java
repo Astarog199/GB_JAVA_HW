@@ -22,21 +22,14 @@ public class main {
 
     public static void main(String[] args) {
 
-        EmployeeByAgeComparator_Descending ageSort_Descending = new EmployeeByAgeComparator_Descending(); // задание 1
-        EmployeeByAgeComparator_Ascending ageSort_Ascending=new EmployeeByAgeComparator_Ascending();
-        EmployeeBySalaryComparator_Ascending salarySort_Ascending = new EmployeeBySalaryComparator_Ascending(); // задание 2
-        EmployeeBySalaryComparator_Descending salarySort_Descending = new EmployeeBySalaryComparator_Descending();
+        EmployeeByAgeComparatorDescending ageSortDescending = new EmployeeByAgeComparatorDescending(); // задание 1
+        EmployeeByAgeComparatorAscending ageSortAscending=new EmployeeByAgeComparatorAscending();
+        EmployeeBySalaryComparatorAscending salarySortAscending = new EmployeeBySalaryComparatorAscending(); // задание 2
+        EmployeeBySalaryComparatorDescending salarySortDescending = new EmployeeBySalaryComparatorDescending();
         EmployeeByNameComparator nameSort = new EmployeeByNameComparator();
-
-        Comparator<Employee> sortAgeSalaryName =ageSort_Ascending.thenComparing(salarySort_Descending); // задание 4
-
+        Comparator<Employee> sortAgeSalaryName =ageSortAscending.thenComparing(salarySortDescending); // задание 4
 
        List<Employee> db = new  ArrayList <>();
-
-
-
-
-
 
         db.add(new Employee("Игорь", 30, 900.0));
         db.add(new Employee("Юрий", 35, 900.0));
@@ -47,8 +40,8 @@ public class main {
         db.add(new Employee("Илья", 45, 500.0));
         db.add(new Employee("Константин", 30, 700.0));
 
-        //       db.sort(ageSort_Descending);     // задание 1 сортировка  по убыванию возрастов
-        //       db.sort(salarySort_Ascending);   // задание 2 сортировка по возрастанию зарплаты.
+//               db.sort(ageSortDescending);     // задание 1 сортировка  по убыванию возрастов
+//               db.sort(salarySortAscending);   // задание 2 сортировка по возрастанию зарплаты.
 
         /*
         Задание 3.
@@ -58,7 +51,7 @@ public class main {
          */
 
         List<Employee> db2 = new  ArrayList <>();       // задание 3
-        db.sort(salarySort_Descending);              // задание 3
+        db.sort(salarySortDescending);              // задание 3
         db2.sort(nameSort);                         // задание 3
 
 
